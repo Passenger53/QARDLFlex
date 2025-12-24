@@ -1,0 +1,38 @@
+Package: QARDLFlex
+Title: Flexible QARDL Estimation and Tests
+Version: 0.1.0
+Date: 2025-12-24
+Authors@R: 
+    person(given = "Xin", 
+           family = "Li", 
+           email = "shin_li@foxmail.com", 
+           role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-6063-8717"))
+Description: Provides a series of functions for flexible estimation of 
+    OLS and quantile regression based ARDL models, as well as 
+    within-model and cross-model parameter hypothesis testing and visualization.
+License: GPL-3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports: 
+    ARDL,
+    dplyr,
+    e1071,
+    ggplot2,
+    lubridate,
+    magrittr,
+    MASS,
+    Matrix,
+    purrr,
+    quantreg,
+    readr,
+    reshape2,
+    rio,
+    stats,
+    stringr,
+    tibble,
+    tidyplots,
+    tidyr,
+    tseries,
+    urca
