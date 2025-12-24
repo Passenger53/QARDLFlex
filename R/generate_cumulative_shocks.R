@@ -29,12 +29,9 @@
 #'   reps = 1
 #' )[[1]]
 #'
-#' # Find optimal lag order using order_find()
-#' optimal_order <- order_find(sample_data, selection = "BIC", export = FALSE)
-#'
 #' # Generate cumulative shocks for specific variables
 #' processed_data <- generate_cumulative_shocks(
-#'   variable_names = c("x1", "x2"),  # Replace with actual variable names
+#'   variable_names = "x1",  # Replace with actual variable names
 #'   data = sample_data
 #' )
 #'
