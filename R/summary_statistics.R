@@ -75,7 +75,7 @@ summary_statistics <- function(data, export = TRUE, file = NULL){
     if (is.null(file)) {
       stop("File path must be specified when export = TRUE")
     }
-    xx %>% export(file)
+    xx %>% rio::export(file)
   }
 
   return(xx)

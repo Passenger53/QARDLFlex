@@ -19,7 +19,8 @@ should be named "date" and will be excluded from analysis.}
 
 \item{selection}{Character. Information criterion for automatic lag selection.
 Currently supports "AIC" (Akaike Information Criterion, tends to select
-models with better prediction accuracy) and "BIC" (Bayesian Information}
+models with better prediction accuracy) and "BIC" (Bayesian Information
+Criterion, which favors more parsimonious models).}
 
 \item{auto_lag}{Logical. If TRUE (default), automatically selects optimal lags
 using specified information criterion. If FALSE, uses manually provided lags.}

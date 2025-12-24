@@ -9,6 +9,7 @@
 #' @param selection Character. Information criterion for automatic lag selection.
 #'        Currently supports "AIC" (Akaike Information Criterion, tends to select
 #'        models with better prediction accuracy) and "BIC" (Bayesian Information
+#'        Criterion, which favors more parsimonious models).
 #' @param auto_lag Logical. If TRUE (default), automatically selects optimal lags
 #'        using specified information criterion. If FALSE, uses manually provided lags.
 #' @param lags Integer vector. Manual lag orders for each variable. Required when
