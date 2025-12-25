@@ -20,6 +20,8 @@
 #'   - If testing the dependent variable with term = "long", tests the ECM coefficient.
 #'   - If testing a variable with ARDL order 0, tests the contemporaneous effect.
 #'   - Cannot mix ECM/Intercept with regular variables in the same test.
+#'   - If length of variable larger than 1. For example, variable = c("x1", "x2"),
+#'   then this function will test H0: beta_1(tau1) = beta_1(tau2), beta_2(tau1) = beta_2(tau2)
 #' @param term Character. For regular variables, specify "long" for long-term
 #'   coefficients or "short" for short-term coefficients. Only applicable when
 #'   testing regular variables (not ECM or Intercept).
