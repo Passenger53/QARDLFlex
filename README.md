@@ -1,9 +1,12 @@
 
+<img width="5333" height="2666" alt="QARDLFlex_Social_Preview" src="https://github.com/user-attachments/assets/e095f17a-ea4b-4662-aaf3-ac029a5c232a" />
+
+
 ## Introduction
 
 ### What is `QARDLFlex`?
 
-A mature and stable implementation for the Quantile Autoregressive Distributed Lag (QARDL) model has been lacking. To address this gap, I developed `QARDLFlex`, an R package designed to provide a flexible and reliable toolkit for QARDL-related analysis. Although `QARDLFlex` is currently in its early development stages, it already offers a complete workflow for empirical research—from descriptive statistics and QARDL model estimation to parameter hypothesis testing.
+A **Flex**ible implementation for the Quantile Autoregressive Distributed Lag (**QARDL**) model has been lacking. To address this gap, I developed `QARDLFlex`, an R package designed to provide a flexible and reliable toolkit for QARDL-related analysis. Although `QARDLFlex` is currently in its early development stages, it already offers a complete workflow for empirical research—from descriptive statistics and QARDL model estimation to parameter hypothesis testing.
 
 The package is available on GitHub at <https://github.com/Passenger53/QARDLFlex>. Installation and usage details will be provided later. For users in mainland China who may experience intermittent access to GitHub, persistent retries are recommended.
 
@@ -73,7 +76,7 @@ devtools::install_github("Passenger53/QARDLFlex")
 
 If have unstable network connectivity (which may be particularly relevant for users in Mainland China), you can choose to install `QARDLFlex` locally by first downloading its archive from GitHub. However, since `QARDLFlex` depends on several other R packages, you will need to install these dependencies first. The required packages are listed below for clarity.
 
--   `ARDL`, `dplyr`, `e1071`, `ggplot2`, `lubridate`, `magrittr`, `MASS`, `Matrix`, `purrr`, `quantreg`, `readr`, `reshape2`, `rio`, `stats`, `stringr`, `tibble`, `tidyplots`, `tidyr`, `tseries`, `urca`
+`ARDL`, `dplyr`, `e1071`, `ggplot2`, `lubridate`, `magrittr`, `MASS`, `Matrix`, `purrr`, `quantreg`, `readr`, `reshape2`, `rio`, `stats`, `stringr`, `tibble`, `tidyplots`, `tidyr`, `tseries`, `urca`
 
 Typically, you can install these packages using the `install.packages()` function. For example:
 
@@ -432,6 +435,9 @@ plot_result <- plot_ECM(
 )
 ```
 
+<img width="1344" height="960" alt="image" src="https://github.com/user-attachments/assets/6b7ce5a0-a777-4995-95cf-d46af019850e" />
+
+
 ### Cross-Quantile Wald Tests
 
 The `cross_quantile_test()` function performs a Wald test to compare coefficients across different quantiles within the Error Correction Model (ECM) framework. It can test whether coefficients are equal across specified quantile levels—either individually or jointly for multiple variables. This test is particularly useful for assessing parameter stability across the conditional distribution.
@@ -453,6 +459,8 @@ The `cross_quantile_test()` function performs a Wald test to compare coefficient
     -   If testing a variable with an ARDL order of zero, the test applies to its contemporaneous effect coefficient.
 
     -   **Note**: `"ECM"` or `"Intercept"` cannot be combined with regular variables in the same test.
+ 
+    -   **If length of `variable` larger than 1**. For example, `variable = c("x1", "x2")`, then this function will test **H0: beta_1(tau1) = beta_1(tau2), beta_2(tau1) = beta_2(tau2)**
 
 -   **`term`**: A character string. For regular variables, specify `"long"` to test long-term coefficients or `"short"` to test short-term coefficients. This argument is only applicable when testing regular variables (i.e., not `"ECM"` or `"Intercept"`).
 
@@ -642,6 +650,9 @@ line_plot <- plot_line_multipliers(
 )
 ```
 
+<img width="1344" height="960" alt="image" src="https://github.com/user-attachments/assets/73590a0c-8d0a-4f17-897b-ded1b79082cd" />
+
+
 ```{.r .cell-code}
 heatmap_plot <- plot_heatmap_multipliers(
   multipliers = results,
@@ -649,6 +660,9 @@ heatmap_plot <- plot_heatmap_multipliers(
   export = FALSE
 )
 ```
+
+<img width="1344" height="960" alt="image" src="https://github.com/user-attachments/assets/876cc720-eac1-4815-a987-da7a26be4b9c" />
+
 
 ## Further Extensions
 
